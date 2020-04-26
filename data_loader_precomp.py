@@ -9,40 +9,6 @@ from PIL import Image
 from build_vocab import Vocabulary
 from vist import VIST
 
-import base64
-import numpy as np
-import csv
-import sys
-import zlib
-import time
-import mmap
-import pickle
-
-csv.field_size_limit(sys.maxsize)
-
-FIELDNAMES = ['image_id', 'features']
-infile = sys.argv[1]
-
-def read_boxes():
-    # Verify we can read a tsv
-    in_data = {}
-    with open(infile, "r+b") as tsv_in_file:
-        reader = csv.DictReader(tsv_in_file, delimiter='\t', fieldnames = FIELDNAMES)
-        for item in reader:
-            try:
-                item['image_id'] = int(item['image_id'])
-            except:
-                print 'no image id', item
-                continue
-            try:
-                item['features'] = np.frombuffer(base64.decodestring(item['features']),
-                      dtype=np.float32).reshape((36,-1))
-            except:
-                print 'currupt', item
-                item['feaures'] = None
-            in_data[item['image_id']] = item['features']
-
-    print len(in_data)
 
 class VistDataset(data.Dataset):
     def __init__(self, image_dir, sis_path, vocab, transform=None):

@@ -24,6 +24,7 @@ def main(args):
 
     # Image preprocessing
     train_transform = transforms.Compose([
+        transforms.Resize(args.image_size, interpolation=Image.LANCZOS),
         transforms.RandomCrop(args.image_size),
         transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
