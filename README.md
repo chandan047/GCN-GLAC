@@ -1,4 +1,4 @@
-# GCN-GLAC Net: GLocal Attention Cascading Network
+# GCN-GLAC Net: GLocal Attention Cascading Network with Graph Convolution
 
 This is modified from [this](https://github.com/tkim-snu/GLACNet) repository as a part of course project IST597: Deep Learning instructed by [Prof. C Lee Giles](http://clgiles.ist.psu.edu/).
 
