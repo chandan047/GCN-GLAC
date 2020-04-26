@@ -1,4 +1,10 @@
-# GLAC Net: GLocal Attention Cascading Network
+# GCN-GLAC Net: GLocal Attention Cascading Network
+
+This is modified from [this](https://github.com/tkim-snu/GLACNet) repository as a part of course project IST597: Deep Learning instructed by [Prof. C Lee Giles](http://clgiles.ist.psu.edu/).
+
+The objective is to augment the GLAC Network for visual storytelling using Graph Convolution Networks.
+
+(Rest of documentation to be updated)
 
 This repository is the implementation of [GLAC Net: GLocal Attention Cascading Network](https://arxiv.org/abs/1805.10973) for the [Visual Storytelling Challenge 2018](http://www.visionandlanguage.net/workshop2018) as a team SnuBiVtt. [Our model got the highest score in the human evaluation of the challenge.](http://aclweb.org/anthology/W18-1500)
 
